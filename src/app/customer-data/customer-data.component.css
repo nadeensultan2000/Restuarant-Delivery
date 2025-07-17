@@ -1,0 +1,94 @@
+.All-Container{
+    display: flex;
+     margin: 20px;   
+}
+.Reserve-Container{
+    width: 50%;
+}
+#reseve-text{
+color: #aca6a6;
+
+}
+i{
+    background-color: rgb(43, 43, 51);
+     height:29px;
+     width: 29px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+input{
+    padding: 1.5px 3px;
+    width: 180px;
+}
+.my-form{
+width:70%;
+display: flex;
+flex-wrap: wrap;
+}
+.my-form div{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    
+}
+
+h2{
+    font-family:"Satisfy";
+  font-weight: 400;
+  font-style: normal;
+  font-size:xx-large;
+
+   
+}
+h3{
+    font-family:"Satisfy";
+    font-size: x-large;
+    font-weight: 100;
+    font-style: normal;
+   
+
+}
+h3 span{
+    color:#ffc700 ;
+}
+#title{
+    padding-bottom:10px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    background-color:#ffc700;
+    color: black;
+    text-decoration: none;
+    border: 1px rgb(195, 190, 190) solid;
+    margin: 6px;
+    padding:  6px 20px;
+    display: flex;
+    justify-self: end; 
+}
+.Order{
+    width: 50%;
+    min-width: 190px;
+    border: 2px #ffc700 solid;
+    padding: 10px;
+    
+      
+}
+.Order img {
+    width: 100%;
+    max-height: 300px;
+    }
+.Order-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.Order-title div{
+    background-color: #ffc700;
+    padding: 8px;
+}

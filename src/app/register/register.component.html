@@ -1,0 +1,41 @@
+<form  class="row g-3 needs-validation" #form="ngForm" >
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">UserName</label>
+      <input ngModel name="fullName" #fullName="ngModel" type="text" class="form-control" id="validationCustom01"  required>
+       <div class="alert alert-danger" *ngIf="fullName.invalid&&fullName.touched">Name is Required</div>
+    </div>
+  
+    <div class="col-md-4">
+      <label for="validationCustomUsername" class="form-label">Email</label>
+      <div  class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend">@</span>
+        <input ngModel name="email" #email="ngModel" type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required email>
+        <div class="alert alert-danger" *ngIf="email.invalid && email.errors" >email is Required</div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">phone</label>
+      <input ngModel name="phone"  #phone="ngModel" type="text" class="form-control" id="validationCustom01" required  maxLength="11" minlength="11">
+      <div class="alert alert-danger" *ngIf="phone.invalid&&phone.touched">phone is Required</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">password</label>
+      <input ngModel name="password" #password="ngModel"  type="password" class="form-control" id="validationCustom01" value="Mark" required>
+      <div class="alert alert-danger" *ngIf="password.invalid&&password.touched">Password is Required</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">confirmPassword</label>
+      <input ngModel name="confirmPassword" #confirmPassword="ngModel" type="password" class="form-control" id="validationCustom01" value="Mark" required>
+      <div class="alert alert-danger" *ngIf="confirmPassword.invalid&&confirmPassword.touched">confirmPassword is Required</div>
+      <div class="alert alert-danger" *ngIf="password.value !== confirmPassword.value">Password is not Match</div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom03" class="form-label">Address</label>
+      <textarea  ngModel name="address" #address="ngModel" class="form-control" id="validationCustom03" required></textarea>
+      <div class="alert alert-danger" *ngIf="address.invalid&&address.touched">address is Required</div>
+
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary" [disabled]="form.invalid||password.value !== confirmPassword.value">Register</button>
+    </div>
+  </form>

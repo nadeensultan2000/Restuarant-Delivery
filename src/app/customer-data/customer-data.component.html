@@ -1,0 +1,41 @@
+
+<div class="All-Container">
+    
+<div class="Reserve-Container">
+    <div id="title" ><h2>Reserve Now</h2> </div> 
+    <p id="reseve-text">Lorem ipsam Lorem ipsam Lorem ipsam Lorem ipsamLorem ipsamLorem ipsamLorem ipsamLorem ipsamLorem ipsam</p>
+    <div class="my-form">
+       <div> 
+        <input  [(ngModel)]="customer.name" type="text" placeholder="Name"> <i class="fa-solid fa-pen" style="color: #ffffff;"></i>
+    </div>
+       <div> 
+        <input [(ngModel)]="customer.email" type="email" placeholder="Email"> <i class="fa-regular fa-envelope" style="color: #ffffff;"></i>
+    </div>
+       <div>
+         <input [(ngModel)]="customer.phone" type="text" placeholder="Phone"> <i class="fa-solid fa-phone" style="color: #ffffff;"></i>
+        </div>
+       <div> 
+        <textarea [(ngModel)]="customer.address"  placeholder="Address"></textarea> <i class="fa-solid fa-location-dot" style="color: #ffffff;"></i>
+    </div>
+      
+      
+    </div>
+    <div style="color: red;">{{this.errorMessage}}</div>
+    <div class="btn-container">
+        
+        <a class="btn" (click)="GoBack()">BACK</a>
+        <a class="btn" (click)="confirm()">CONFIRM</a>
+        </div> 
+       
+</div>
+
+ <div class="Order">
+   <div class="Order-title"> <h3> <span>Todays </span>specail</h3>
+    <div>$ 12.00</div>
+   </div>
+    <div> CASRERSALAD</div>
+    <P>Lorem ipsam Lorem ipsam Lorem ipsam Lorem ipsamLorem ipsamLorem ipsamLorem ipsamLorem ipsamLorem ipsam</P>
+    <img  src="https://th.bing.com/th/id/R.1a32300a1f3d69708d49b08c6eb89693?rik=lt4UftWfwKgojw&pid=ImgRaw&r=0" alt="">
+ </div>
+
+</div>

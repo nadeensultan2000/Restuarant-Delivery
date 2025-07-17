@@ -1,0 +1,70 @@
+<div class="Container">
+    <h2 class="head">Order  <span>Food Online From </span>the Best Restaurants</h2>
+    <div class="search-container">
+      <input class="search" type="text" [(ngModel)]="selectedName" placeholder="Restaurant Name">
+
+       <select class="search" [(ngModel)]="selectedCity">
+        <option value="" disabled>Select a city</option>
+       
+        <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+       </select>
+      <button id="search-btn" class="search" (click)="fillterRestaurant(selectedCity,selectedName)">SEARCH</button>
+    </div>
+    <div class="Count-Countainer">
+      <div class="count">
+        <img class="count-img" src="https://media.timeout.com/images/105239239/image.jpg" alt="">
+       <div class="count-text"> 
+        <h1>173</h1>
+        <p>Restaurant</p>
+      </div>
+      </div>
+    <div class="count">
+      <img class="count-img" src="https://img.freepik.com/premium-vector/creative-cartoon-avatar-design-vector_897737-1.jpg" alt="">
+     <div class="count-text"> 
+      <h1>158</h1>
+      <p>People Served</p>
+    </div>
+    </div>
+
+    <div class="count">
+      <img class="count-img" src="https://img.freepik.com/premium-vector/creative-cartoon-avatar-design-vector_897737-1.jpg" alt="">
+     <div class="count-text"> 
+      <h1>173k</h1>
+      <p>Happy Served</p>
+    </div>
+    </div>
+    <div class="count">
+      <img class="count-img" src="https://e7.pngegg.com/pngimages/84/313/png-clipart-toyota-logo-lean-software-development-project-management-research-text-service.png" alt="">
+     <div class="count-text"> 
+      <h1>173</h1>
+      <p>People</p>
+    </div>
+    </div>
+    </div>
+
+   
+    <div class="Restaurants">
+      <div  *ngFor="let restaurant of restaurants" class="Restaurant"  routerLink="/menu/{{restaurant.id}}">
+        <img src="https://th.bing.com/th/id/OIP.jJI3bTJ-diLfKDHb9-vwmwHaE8?rs=1&pid=ImgDetMain" >
+        <div class="Reactions">
+          <i class="fa-solid fa-star" style="color: #1c1e21;"></i>
+          <i class="fa-solid fa-star" style="color: #1c1e21;"></i>
+          <i class="fa-solid fa-star" style="color: #1c1e21;"></i>
+          <i class="fa-solid fa-star" style="color: #1c1e21;"></i>
+          <i class="fa-regular fa-star" style="color: #18191b;"></i> | 
+          <i class="fa-regular fa-comments" style="color: #0e0f10;"></i> 50 | 
+          <i class="fa-solid fa-heart" style="color: #1d1e20;"></i> 189 
+        </div>
+        <br>
+        <br>
+        <p id="restaurant_name"> {{restaurant.name}}</p>
+        <p>{{restaurant.description}}</p>
+        <a routerLink="/menu/{{restaurant.id}}">Menu >></a>
+      </div>
+     
+      </div>
+ 
+    </div>
+    
+   
+    

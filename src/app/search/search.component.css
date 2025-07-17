@@ -1,0 +1,120 @@
+.Container{
+    background-color: rgb(63, 63, 62);
+    align-items: center;
+    height: 100vh;
+}
+@media  screen and (max-width: 300px) {
+    .Restaurants{
+        width: 100%;
+        
+    }
+  .Restaurant{
+    width: 100%;
+  } 
+  .Restaurant img{
+    width: 100%;
+  }
+}
+.Restaurant img{
+    max-width: 250px;
+}
+#restaurant_name{
+    font-family:Great Vibes;
+    font-weight: lighter;
+    font-size:large;
+}
+.head{
+    color: white;
+    justify-self: center;
+    padding-top: 50px;
+    padding-bottom:50px ;
+}
+
+h1{
+    color: white;
+   align-items:baseline;
+   padding: 5% 30%;
+}
+span{
+        font-family:Great Vibes;
+        font-weight: lighter;
+        font-size: xx-large;
+        
+    }
+.search-container{
+    display: flex;
+   
+    justify-self: center;
+    background-color:  rgb(255, 223, 64);
+    padding: 10px;
+
+}
+.search{
+    padding: 7px 20px;
+    margin: 4px;
+    border:0;
+}
+#search-btn{
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    border:0;
+}
+.Count-Countainer{
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.count{
+    display: flex;
+}
+.count-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+
+}
+
+.count-img{
+    width: 90px;
+    height:90px;
+    border-radius: 50%;
+    margin: 10px;
+
+  
+}
+.Restaurants{
+    display: flex;
+    padding: 2px;
+    margin: 2px;
+    justify-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color:white;
+   border-radius: 10px;
+   margin: 10px;
+   width: 100%;
+
+}
+.Reactions{
+    background-color: orange;
+    padding: 3px;
+    justify-self: center;
+  
+ 
+
+    
+}
+.Restaurant{
+    margin: 5px;
+    border: 1px solid rgb(209, 205, 205);
+    padding: 1px;
+    position: relative;
+}
+
+a{
+    color: black;
+}

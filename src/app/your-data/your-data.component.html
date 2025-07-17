@@ -1,0 +1,76 @@
+
+<div class="All-Container">
+<div id="title"><h2>YOUR DATA</h2></div>
+<div class="user-data-container">
+  
+    <div class="user-data-item">
+        <div class="icon"><i class="fa-solid fa-user" style="color: #FFD43B;"></i></div>
+        <div> 
+            <div class="data-name">Name</div>
+            <p>{{order.customerName}}</p>
+        </div>
+    </div>
+
+    <div class="user-data-item">
+        <div class="icon"><i class="fa-solid fa-phone" style="color: #FFD43B;"></i></div>
+        <div> 
+            <div class="data-name">Phone</div>
+            <p>{{order.customerPhone}}</p>
+        </div>
+    </div>
+
+    <div class="user-data-item">
+        <div class="icon"><i class="fa-regular fa-envelope"  style="color: #FFD43B;"></i></div>
+        <div> 
+            <div class="data-name">Email</div>
+            <p>{{order.customerEmail}}</p>
+        </div>
+    </div>
+
+    <div class="user-data-item">
+        <div class="icon"><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i></div>
+        <div> 
+            <div class="data-name">Address</div>
+            <p>{{order.customerAddress}}</p>
+        </div>
+    </div>
+</div>
+
+<table id="table">
+    <tr>
+        <th></th>
+        <th>PRODUCT</th>
+        <th>PRICE</th>
+        <th>QUANTITY</th>
+        <th>TOTAL</th>
+        <th></th>
+    
+    </tr>
+
+    <tr *ngFor="let item of order.items;let index=index;">
+        <td><img src="https://th.bing.com/th/id/R.1a32300a1f3d69708d49b08c6eb89693?rik=lt4UftWfwKgojw&pid=ImgRaw&r=0" alt=""></td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td let item.quantity = 1 >
+            <button (click)="Minus(index)"> - </button>
+            <input  [(ngModel)]="item.quantity" min=1  max=100 type="number" (change)="UpdateOrderTotal()">
+            <button (click)="Plus(index)"> + </button>
+        </td>
+        <td><p  *ngIf="item.quantity!=null">{{item.price*item.quantity}}$</p></td>
+        <td > <div class="delete-btn"(click)="DeleteItem(index)" title="Delete Product">x</div> </td>
+    </tr>
+</table>
+<br>
+<br>
+<div class="Total-Container">
+    
+    <div class="Sub-Container"> <h3>Total</h3><h4>{{this.total}} $</h4></div>
+    <hr>
+    <div class="Sub-Container"><h4>SubTotal</h4> <h4>{{this.total}} $</h4></div>
+    <hr>
+
+    <div class="Sub-Container"> <button (click)="GoBack()">BACK</button><button (click)="AddOrder()">CHECKOUT</button></div>
+
+</div>
+</div>
+<div class="alert alert-success" *ngIf="success==true" ><strong>Well Done! </strong>Your Order Will Successfully Send <br></div>

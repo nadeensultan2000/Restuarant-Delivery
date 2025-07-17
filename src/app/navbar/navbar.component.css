@@ -1,0 +1,18 @@
+.Logo{
+    color:rgb(255, 223, 61);
+     font-family:Great Vibes;
+    font-weight: larger;
+    font-size:xx-large;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+a{
+    color:rgb(234, 221, 159);
+    font-weight: larger;
+    font-size:large;
+    margin-left: 10px;
+    margin-bottom: 0; 
+    text-decoration: none;  
+    font-family:'Times New Roman', Times, serif;
+
+}
